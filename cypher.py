@@ -21,7 +21,8 @@ class Morse:
         encoded = ''
         for char in my_string.upper():
             if char != ' ':
-                encoded += MorseAlph[char] + ' '
+                if char in MorseAlph.keys():
+                    encoded += MorseAlph[char] + ' '
             else:
                 encoded += ' '
         return encoded
